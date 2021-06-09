@@ -1,15 +1,32 @@
-# Demonstration of VIPS/Photoshop issue
+# Demonstration of [libvips/libvips #2290](https://github.com/libvips/libvips/issues/2290)
 
-| File                | Description               |
-| ---                 | ---                       |
-| villette-040.tiff   | original                  |
-| villette-040-p.tiff | pyramid created with vips |
+| File                | Description                          |
+| ---                 | ---                                  |
+| villette-040.tiff   | original monochrome TIFF             |
+| villette-040-p.tiff | VIPS pyramid TIFF w/JPEG compression |
+| stgall-sm.jpg       | original JPEG                        |
+| stgall-sm-p.tif     | VIPS pyramid TIFF w/JPEG compression |
+| stgall-sm-np.tif    | VIPS flat TIFF w/JPEG compresson     |
 
-VIPS command used:
+VIPS commands used:
 
-```sh
-vips tiffsave villette-040.tiff villette-040-p.tiff --tile --pyramid --compression jpeg --tile-width 256 --tile-height 256
-```
+- for `villette-040-p.tiff`:
+
+  ```sh
+  vips tiffsave villette-040.tiff villette-040-p.tiff --tile --pyramid --compression jpeg --tile-width 256 --tile-height 256
+  ```
+
+- for `stgall-sm-p.tif`:
+
+  ```sh
+  vips tiffsave stgall-sm.jpg stgall-sm-p.tif --compression jpeg --tile --pyramid --tile-width 256 --tile-height 256
+  ```
+
+- for `stgall-sm-np.tif`:
+
+  ```sh
+  vips tiffsave stgall-sm.jpg stgall-sm-np.tif --compression jpeg
+  ```
 
 Opening in Photoshop 2021 fails with:
 
