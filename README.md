@@ -1,12 +1,13 @@
 # Demonstration of [libvips/libvips #2290](https://github.com/libvips/libvips/issues/2290)
 
-| File                | Description                          |
-| ---                 | ---                                  |
-| villette-040.tiff   | original monochrome TIFF             |
-| villette-040-p.tiff | VIPS pyramid TIFF w/JPEG compression |
-| stgall-sm.jpg       | original JPEG                        |
-| stgall-sm-p.tif     | VIPS pyramid TIFF w/JPEG compression |
-| stgall-sm-np.tif    | VIPS flat TIFF w/JPEG compresson     |
+| File                | Description                           |
+| ---                 | ---                                   |
+| villette-040.tiff   | original monochrome TIFF              |
+| villette-040-p.tiff | VIPS pyramid TIFF w/JPEG compression  |
+| stgall-sm.jpg       | original JPEG                         |
+| stgall-sm-p.tif     | VIPS pyramid TIFF w/JPEG compression  |
+| stgall-sm-np.tif    | VIPS flat TIFF w/JPEG compresson      |
+| stgall-sm-ps.tif    | Photoshop flat TIFF w/JPEG compresson |
 
 VIPS commands used:
 
